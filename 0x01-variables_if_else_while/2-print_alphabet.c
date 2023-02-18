@@ -9,10 +9,14 @@
  * Return: Always 0.
 */
 
-int main() {
-    char c;
-    for (c = 'A'; c <= 'Z'; ++c)
-        printf("%c ", c);
-    return 0;
-}
+int main(void)
+{
+	char letter;
 
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+
+	putchar('\n');
+
+	return (0);
+}
