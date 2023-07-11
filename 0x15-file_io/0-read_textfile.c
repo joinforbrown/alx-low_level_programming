@@ -1,21 +1,19 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 
-/****
- * @filename: the text file to be read .
- * @latters: the numbers of latters to be read.
- * Return: w- the number of bytes printed and read
- * 	0 when function fails.
- * read_textfile - read text file STDOUT to print.
- *
+/**
+ * @letters: the  number of letters to be read and printed
+ * Return: w- the  number of bytes read and printed
+ *        0 when function fails.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd;
 	char *buf;
-	ssize_t t;
+	ssize_t fd;
 	ssize_t w;
+	ssize_t t;
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
@@ -27,5 +25,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buf);
 	close(fd);
 	return (w);
-
 }
+
